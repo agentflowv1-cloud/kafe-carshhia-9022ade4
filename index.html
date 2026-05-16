@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kafe Çarshia — Prishtinë</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <a class="nav-logo" href="#">Kafe Çarshia</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#ambience">Space</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="ring ring-1"></div>
+    <div class="ring ring-2"></div>
+    <div class="ring ring-3"></div>
+    <div class="steam-wrap">
+      <span class="steam"></span>
+      <span class="steam"></span>
+      <span class="steam"></span>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 2016 · Prishtinë, Kosovë</p>
+      <h1>Where <em>Every Cup</em> Tells a Story</h1>
+      <p class="hero-sub">Specialty coffee roasted with tradition, served in the heart of Prishtina's old bazaar. From single-origin espresso to slow pour-overs — crafted for those who savour the moment.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn-primary">Explore the Menu</a>
+        <a href="#visit" class="btn-ghost">Find Us <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      Scroll to discover
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about-visual reveal">
+      <div class="about-card about-card-main">
+        <svg width="220" height="220" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="50" rx="40" ry="28" stroke="#F5EDD8" stroke-width="2"/>
+          <path d="M50 22 C50 22 35 35 35 50 C35 65 50 78 50 78" stroke="#F5EDD8" stroke-width="2" fill="none"/>
+        </svg>
+      </div>
+      <div class="about-card about-card-accent">
+        <div class="stat">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Origins sourced</div>
+        </div>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="section-label reveal">Our Story</p>
+      <h2 class="reveal reveal-delay-1">Born from the Çarshia's Heartbeat</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+      <p class="reveal reveal-delay-2">Kafe Çarshia opened its doors in the old bazaar of Prishtina — a place where traders have gathered for centuries. We honour that spirit by bringing together the world's finest green beans with the craft of Kosovo's growing barista culture.</p>
+      <p class="reveal reveal-delay-3">We roast in-house every Tuesday and Friday. Come on those mornings and the whole neighbourhood smells like a promise.</p>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu">
+    <div class="menu-header">
+      <div>
+        <p class="section-label reveal">What We Brew</p>
+        <h2 class="reveal reveal-delay-1">The Menu</h2>
+      </div>
+      <div class="menu-tabs reveal">
+        <button class="tab active" data-cat="coffee" onclick="filterMenu('coffee')">Coffee</button>
+        <button class="tab" data-cat="food" onclick="filterMenu('food')">Food</button>
+        <button class="tab" data-cat="seasonal" onclick="filterMenu('seasonal')">Seasonal</button>
+      </div>
+    </div>
+    <div class="menu-grid" id="menuGrid">
+
+      <!-- Coffee -->
+      <div class="menu-item visible" data-cat="coffee">
+        <div class="item-top">
+          <span class="item-name">Espresso Doppio</span>
+          <span class="item-price">1.50 €</span>
+        </div>
+        <p class="item-desc">Double shot of our house blend — dark chocolate, dried cherry, lingering finish.</p>
+        <span class="item-tag">House Blend</span>
+      </div>
+      <div class="menu-item visible" data-cat="coffee">
+        <div class="item-top">
+          <span class="item-name">Flat White</span>
+          <span class="item-price">2.20 €</span>
+        </div>
+        <p class="item-desc">Ristretto base, velvety microfoam, poured with intention. The barista's pride.</p>
+        <span class="item-tag">Signature</span>
+      </div>
+      <div class="menu-item visible" data-cat="coffee">
+        <div class="item-top">
+          <span class="item-name">V60 Pour-Over</span>
+          <span class="item-price">3.50 €</span>
+        </div>
+        <p class="item-desc">Single-origin, brewed to order. Ask your barista about today's selection.</p>
+        <span class="item-tag">Single Origin</span>
+      </div>
+      <div class="menu-item visible" data-cat="coffee">
+        <div class="item-top">
+          <span class="item-name">Cappuccino</span>
+          <span class="item-price">2.00 €</span>
+        </div>
+        <p class="item-desc">Equal thirds espresso, steamed milk and silky foam. Classic never disappoints.</p>
+        <span class="item-tag">Classic</span>
+      </div>
+      <div class="menu-item visible" data-cat="coffee">
+        <div class="item-top">
+          <span class="item-name">Cold Brew</span>
+          <span class="item-price">2.80 €</span>
+        </div>
+        <p class="item-desc">18-hour steep, served over ice. Smooth, low-acid, naturally sweet.</p>
+        <span class="item-tag">Cold</span>
+      </div>
+      <div class="menu-item visible" data-cat="coffee">
+        <div class="item-top">
+          <span class="item-name">Macchiato</span>
+          <span class="item-price">1.70 €</span>
+        </div>
+        <p class="item-desc">Espresso marked with a touch of foam. Brief and bold.</p>
+        <span class="item-tag">Short</span>
+      </div>
+
+      <!-- Food -->
+      <div class="menu-item" data-cat="food">
+        <div class="item-top">
+          <span class="item-name">Byrek me Djathë</span>
+          <span class="item-price">1.80 €</span>
+        </div>
+        <p class="item-desc">Flaky filo pastry filled with fresh white cheese. Baked fresh each morning.</p>
+        <span class="item-tag">Traditional</span>
+      </div>
+      <div class="menu-item" data-cat="food">
+        <div class="item-top">
+          <span class="item-name">Avocado Toast</span>
+          <span class="item-price">4.50 €</span>
+        </div>
+        <p class="item-desc">Sourdough, whipped ricotta, smashed avocado, chilli flakes, lemon zest.</p>
+        <span class="item-tag">Brunch</span>
+      </div>
+      <div class="menu-item" data-cat="food">
+        <div class="item-top">
+          <span class="item-name">Granola Bowl</span>
+          <span class="item-price">3.90 €</span>
+        </div>
+        <p class="item-desc">House granola, Greek yoghurt, seasonal fruit, local honey drizzle.</p>
+        <span class="item-tag">Healthy</span>
+      </div>
+      <div class="menu-item" data-cat="food">
+        <div class="item-top">
+          <span class="item-name">Croissant</span>
+          <span class="item-price">2.00 €</span>
+        </div>
+        <p class="item-desc">Laminated butter croissant, delivered fresh daily from Pastiçeria Vllaznia.</p>
+        <span class="item-tag">Bakery</span>
+      </div>
+      <div class="menu-item" data-cat="food">
+        <div class="item-top">
+          <span class="item-name">Club Sandwich</span>
+          <span class="item-price">5.50 €</span>
+        </div>
+        <p class="item-desc">Toasted sourdough, turkey, emmental, lettuce, tomato, garlic mayo.</p>
+        <span class="item-tag">Lunch</span>
+      </div>
+      <div class="menu-item" data-cat="food">
+        <div class="item-top">
+          <span class="item-name">Tiramisu</span>
+          <span class="item-price">2.80 €</span>
+        </div>
+        <p class="item-desc">Made in-house with our own espresso. Small batch, often sells out.</p>
+        <span class="item-tag">Dessert</span>
+      </div>
+
+      <!-- Seasonal -->
+      <div class="menu-item" data-cat="seasonal">
+        <div class="item-top">
+          <span class="item-name">Rose Latte</span>
+          <span class="item-price">3.00 €</span>
+        </div>
+        <p class="item-desc">Espresso, steamed oat milk, house-made rose syrup, dried petals on top.</p>
+        <span class="item-tag">Spring Special</span>
+      </div>
+      <div class="menu-item" data-cat="seasonal">
+        <div class="item-top">
+          <span class="item-name">Elderflower Tonic</span>
+          <span class="item-price">3.20 €</span>
+        </div>
+        <p class="item-desc">Cold brew over elderflower tonic water. Floral, fizzy, unexpected.</p>
+        <span class="item-tag">Cold · Spring</span>
+      </div>
+      <div class="menu-item" data-cat="seasonal">
+        <div class="item-top">
+          <span class="item-name">Cardamom Honey Latte</span>
+          <span class="item-price">3.10 €</span>
+        </div>
+        <p class="item-desc">Warming spiced espresso with wildflower honey. Inspired by Kosovo's çaj traditions.</p>
+        <span class="item-tag">Limited</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ambience -->
+  <section id="ambience">
+    <div class="reveal">
+      <blockquote class="ambience-quote">
+        "The best coffee shop is the one where time slows down just enough for a real conversation."
+        <cite>— Blerta, regular since day one</cite>
+      </blockquote>
+    </div>
+    <div class="ambience-features">
+      <div class="feat reveal">
+        <div class="feat-icon">☕</div>
+        <div class="feat-name">In-House Roastery</div>
+        <div class="feat-desc">We roast our own green beans weekly. Freshness you can taste in every shot.</div>
+      </div>
+      <div class="feat reveal reveal-delay-1">
+        <div class="feat-icon">📖</div>
+        <div class="feat-name">Slow Morning Vibes</div>
+        <div class="feat-desc">Curated playlists, natural light, no rush. Bring a book or just bring yourself.</div>
+      </div>
+      <div class="feat reveal reveal-delay-2">
+        <div class="feat-icon">🌐</div>
+        <div class="feat-name">Fast Wi-Fi</div>
+        <div class="feat-desc">Reliable connection for remote workers and long-session regulars. No time limit.</div>
+      </div>
+      <div class="feat reveal reveal-delay-3">
+        <div class="feat-icon">🌱</div>
+        <div class="feat-name">Plant-Based Options</div>
+        <div class="feat-desc">Oat, almond, and soy milk available at no extra charge. Always have been.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visit -->
+  <section id="visit">
+    <div class="visit-info">
+      <p class="section-label reveal">Come Find Us</p>
+      <h2 class="reveal reveal-delay-1">We're Right Here,<br>in the Old Bazaar</h2>
+      <div class="divider reveal reveal-delay-2"></div>
+
+      <div class="info-block reveal reveal-delay-2">
+        <div class="info-label">Address</div>
+        <div class="info-value">Rruga e Çarshisë 14<br>10000 Prishtinë, Kosovë</div>
+      </div>
+      <div class="info-block reveal reveal-delay-3">
+        <div class="info-label">Hours</div>
+        <div class="info-value">
+          Monday – Friday &nbsp; 07:30 – 22:00<br>
+          Saturday &nbsp; 08:00 – 23:00<br>
+          Sunday &nbsp; 09:00 – 20:00
+        </div>
+      </div>
+      <div class="info-block reveal">
+        <div class="info-label">Contact</div>
+        <div class="info-value">+383 44 123 456<br>hello@kafecarshhia.com</div>
+      </div>
+
+      <div class="social-row reveal">
+        <a class="social-btn" href="#">Instagram</a>
+        <a class="social-btn" href="#">Facebook</a>
+        <a class="social-btn" href="#">TikTok</a>
+      </div>
+    </div>
+
+    <div class="map-placeholder reveal reveal-delay-1">
+      <div class="map-pin">📍</div>
+      <div class="map-text">Çarshia e Vjetër</div>
+      <div class="map-sub">Prishtinë · Kosovë</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">Kafe Çarshia</div>
+    <div class="footer-copy">© 2026 Kafe Çarshia · Prishtinë · All rights reserved</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
